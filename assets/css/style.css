@@ -153,3 +153,31 @@ textarea::-webkit-scrollbar-thumb {
   border: 1px solid #0a3871;
   color: #0a3871;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #input-main {
+    width: 688px;
+    font-size: 3rem;
+  }
+
+  .section-output {
+    width: 688px;
+  }
+
+  #msg-copy {
+    width: 650px;
+  }
+
+  .btn-copy {
+    width: 624px;
+  }
+
+  .btns {
+    flex-direction: row;
+    margin-bottom: 70px;
+  }
+
+  .btn-decrypt {
+    margin-bottom: 0;
+  }
+}
