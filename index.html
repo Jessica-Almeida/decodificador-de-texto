@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://kit.fontawesome.com/e8a034c4b7.js" crossorigin="anonymous"></script>
 
     <title>Decodificador de Texto</title>
@@ -14,24 +15,28 @@
 <body>
 
     <header>
-        <img src="./assets/imgs/logo-alura.png" alt="Logo da Alura Cursos">
+        <figure> <img class="logo" src="./assets/imgs/logo-alura.png" alt="Logo da Alura Cursos"> </figure>
     </header>
 
     <main>
 
-        <section>
-            <textarea cols="45" rows="6" placeholder="Digite seu Texto"></textarea>
-            <p> <i class="fa-solid fa-circle-exclamation"></i> Apenas letras minúsculas e sem caracteres especiais.</p>
-            <button class="btn btn-encrypt">Criptografar</button>
-            <button class="btn btn-decrypt">Descriptografar</button>
+        <section class="section-input">
+            <textarea id="input-main" cols="45" rows="6" placeholder="Digite seu Texto"></textarea>
+            <p class="text-warning"> <i class="fa-solid fa-circle-exclamation"></i> Apenas letras minúsculas e sem
+                caracteres especiais.</p>
+            <div class="btns">
+                <button class="btn btn-encrypt">Criptografar</button>
+                <button class="btn btn-decrypt">Descriptografar</button>
+            </div>
         </section>
 
-        <section>
-            <img src="./assets/imgs/ilustracao.png" alt="Ilustração de um boneco com uma lupa analisando um diamante">
+        <section class="section-output">
+            <figure> <img class="ilustracao" src="./assets/imgs/ilustracao.png"
+                    alt="Ilustração de um boneco com uma lupa analisando um diamante"> </figure>
             <h3>Nenhuma mensagem encontrada</h3>
             <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-            <textarea cols="20" rows="10" id="result"></textarea>
-            <button>Copiar</button>
+            <textarea id="msg-copy" cols="20" rows="10"></textarea>
+            <button class="btn btn-copy">Copiar</button>
         </section>
 
     </main>
