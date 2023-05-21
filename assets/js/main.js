@@ -25,5 +25,28 @@ function decryptText(text) {
   return text;
 }
 
-console.log(encryptText("alura"));
-console.log(decryptText("ailufatrai"));
+function encryptBtnHandler() {
+  const encryptedText = input.value;
+
+  const resultEncrypt = encryptText(encryptedText);
+  output.value = resultEncrypt;
+
+  input.value = "";
+
+  return resultEncrypt;
+}
+
+function decryptBtnHandler() {
+  const decryptedText = input.value;
+
+  const resultDecrypt = decryptText(decryptedText);
+  output.value = resultDecrypt;
+
+  input.value = "";
+
+  return resultDecrypt;
+}
+
+btnEncrypt.addEventListener("click", encryptBtnHandler);
+
+btnDecrypt.addEventListener("click", decryptBtnHandler)
