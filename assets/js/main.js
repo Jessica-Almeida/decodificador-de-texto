@@ -47,6 +47,20 @@ function decryptBtnHandler() {
   return resultDecrypt;
 }
 
+function copyText() {
+  const copiedText = output.value;
+
+  try {
+    navigator.clipboard.writeText(copiedText);
+    alert("Texto copiado com sucesso!");
+    output.value = "";
+  } catch (error) {
+    console.error("Erro ao copiar o texto:", error);
+  }
+}
+
 btnEncrypt.addEventListener("click", encryptBtnHandler);
 
-btnDecrypt.addEventListener("click", decryptBtnHandler)
+btnDecrypt.addEventListener("click", decryptBtnHandler);
+
+btnCopy.addEventListener("click", copyText);
