@@ -32,12 +32,16 @@
         </section>
 
         <section class="section-output">
-            <!-- <figure> <img class="ilustracao" src="./assets/imgs/ilustracao.svg"
-                    alt="Ilustração de um boneco com uma lupa analisando um diamante"> </figure>
-            <h3>Nenhuma mensagem encontrada</h3>
-            <p>Digite um texto que você deseja criptografar ou descriptografar.</p> -->
-            <textarea id="msg-copy" cols="20" rows="10" data-text="output"></textarea>
-            <button class="btn btn-copy" data-btns="copy" readonly>Copiar</button>
+            <div data-area="msg" data-hidden="false">
+                <figure> <img class="ilustracao" src="./assets/imgs/ilustracao.svg"
+                        alt="Ilustração de um boneco com uma lupa analisando um diamante"> </figure>
+                <h3>Nenhuma mensagem encontrada</h3>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+            <div data-area="result" data-hidden="true">
+                <textarea id="msg-copy" cols="20" rows="10" data-text="output"></textarea>
+                <button class="btn btn-copy" data-btns="copy" readonly>Copiar</button>
+            </div>
         </section>
 
     </main>

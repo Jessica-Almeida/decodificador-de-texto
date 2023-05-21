@@ -110,7 +110,8 @@ textarea:focus {
   border-radius: 32px;
 }
 
-.ilustracao {
+.ilustracao,
+[data-hidden="true"] {
   display: none;
 }
 

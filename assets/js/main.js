@@ -5,6 +5,9 @@ const btnDecrypt = document.querySelector('[data-btns="decrypt"]');
 const output = document.querySelector('[data-text="output"]');
 const btnCopy = document.querySelector('[data-btns="copy"]');
 
+const areaMsg = document.querySelector('[data-area="msg"]');
+const areaResult = document.querySelector('[data-area="result"]');
+
 function encryptText(text) {
   text = text
     .replace(/e/g, "enter")
@@ -31,6 +34,16 @@ function isValidText(text) {
   return result;
 }
 
+function showArea(area) {
+  area.dataset.hidden = "false";
+  area.setAttribute("aria-hidden", "false");
+}
+
+function hideArea(area) {
+  area.dataset.hidden = "true";
+  area.setAttribute("aria-hidden", "true");
+}
+
 function encryptBtnHandler() {
   const encryptedText = input.value;
 
@@ -49,6 +62,9 @@ function encryptBtnHandler() {
 
   const resultEncrypt = encryptText(encryptedText);
   output.value = resultEncrypt;
+
+  showArea(areaResult);
+  hideArea(areaMsg);
 
   input.value = "";
 
@@ -74,6 +90,9 @@ function decryptBtnHandler() {
   const resultDecrypt = decryptText(decryptedText);
   output.value = resultDecrypt;
 
+  showArea(areaResult);
+  hideArea(areaMsg);
+
   input.value = "";
 
   return resultDecrypt;
@@ -86,6 +105,8 @@ function copyText() {
     navigator.clipboard.writeText(copiedText);
     alert("Texto copiado com sucesso!");
     output.value = "";
+    showArea(areaMsg);
+    hideArea(areaResult);
   } catch (error) {
     console.error("Erro ao copiar o texto:", error);
   }
