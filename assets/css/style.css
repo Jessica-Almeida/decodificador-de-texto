@@ -183,42 +183,41 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 @media (min-width: 1025px) {
-    main {
-      flex-direction: row;
-      gap: 23px;
-    }
-  
-    .section-input {
-      padding-left: 20px;
-    }
-  
-    #input-main {
-      width: 700px;
-    }
-  
-    .ilustracao {
-      display: block;
-      width: 250px;
-      height: 300px;
-    }
-  
-    .section-output {
-      justify-content: center;
-      margin-top: -70px;
-      height: 580px;
-    }
-    
-    #msg-copy {
-      padding-bottom: 30px;
-    }
-  
-    .btns {
-      flex-direction: row;
-      gap: 24px;
-    }
-  
-    .btn-decrypt {
-      margin-bottom: 0;
-    }
+  main {
+    flex-direction: row;
+    gap: 23px;
   }
-  
+
+  .section-input {
+    padding-left: 20px;
+  }
+
+  #input-main {
+    width: 700px;
+  }
+
+  .ilustracao {
+    display: block;
+    width: 250px;
+    height: 300px;
+  }
+
+  .section-output {
+    justify-content: center;
+    margin-top: -70px;
+    height: 580px;
+  }
+
+  #msg-copy {
+    padding-bottom: 30px;
+  }
+
+  .btns {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .btn-decrypt {
+    margin-bottom: 0;
+  }
+}

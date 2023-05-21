@@ -21,29 +21,30 @@
     <main>
 
         <section class="section-input">
-            <textarea id="input-main" cols="45" rows="6" placeholder="Digite seu Texto"></textarea>
+            <textarea id="input-main" cols="45" rows="6" placeholder="Digite seu Texto" data-text="input"
+                autofocus></textarea>
             <p class="text-warning"> <i class="fa-solid fa-circle-exclamation"></i> Apenas letras minúsculas e sem
                 caracteres especiais.</p>
             <div class="btns">
-                <button class="btn btn-encrypt">Criptografar</button>
-                <button class="btn btn-decrypt">Descriptografar</button>
+                <button class="btn btn-encrypt" data-btns="encrypt">Criptografar</button>
+                <button class="btn btn-decrypt" data-btns="decrypt">Descriptografar</button>
             </div>
         </section>
 
         <section class="section-output">
-            <figure> <img class="ilustracao" src="./assets/imgs/ilustracao.svg"
+            <!-- <figure> <img class="ilustracao" src="./assets/imgs/ilustracao.svg"
                     alt="Ilustração de um boneco com uma lupa analisando um diamante"> </figure>
             <h3>Nenhuma mensagem encontrada</h3>
-            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-            <!-- <textarea id="msg-copy" cols="20" rows="10"></textarea>
-            <button class="btn btn-copy">Copiar</button> -->
+            <p>Digite um texto que você deseja criptografar ou descriptografar.</p> -->
+            <textarea id="msg-copy" cols="20" rows="10" data-text="output"></textarea>
+            <button class="btn btn-copy" data-btns="copy">Copiar</button>
         </section>
 
     </main>
 
     <footer></footer>
 
-    <script src="main.js"></script>
+    <script src="./assets/js/main.js"></script>
 
 </body>
 
