@@ -25,8 +25,27 @@ function decryptText(text) {
   return text;
 }
 
+function isValidText(text) {
+  const regex = /^[a-z][a-z\s]*\s?$/;
+  const result = text === "" || regex.test(text);
+  return result;
+}
+
 function encryptBtnHandler() {
   const encryptedText = input.value;
+
+  if (!isValidText(encryptedText)) {
+    alert(
+      "Entrada inválida! Por favor, use apenas letras minúsculas, sem caracteres especiais e espaços no início."
+    );
+    input.value = "";
+    return;
+  }
+
+  if (!encryptedText) {
+    alert("Por favor, insira um texto!");
+    return;
+  }
 
   const resultEncrypt = encryptText(encryptedText);
   output.value = resultEncrypt;
@@ -38,6 +57,19 @@ function encryptBtnHandler() {
 
 function decryptBtnHandler() {
   const decryptedText = input.value;
+
+  if (!isValidText(decryptedText)) {
+    alert(
+      "Entrada inválida! Por favor, use apenas letras minúsculas, sem caracteres especiais e espaços no início."
+    );
+    input.value = "";
+    return;
+  }
+
+  if (!decryptedText) {
+    alert("Por favor, insira um texto!");
+    return;
+  }
 
   const resultDecrypt = decryptText(decryptedText);
   output.value = resultDecrypt;
